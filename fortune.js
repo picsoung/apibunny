@@ -6,13 +6,15 @@
 var fortune = require("fortune");
 var express = fortune.express;
 var partials = require('express-partials');
-var keenio = require('express-keenio');;
+var keenio = require('express-keenio');
+
+var config = require('./config');
 
 var crypto = require('crypto')
-  , key = 'YOUROWNKEY';
+  , key = config.apibunny.privateKey;
 
 var container = express()
-  , port = process.argv[2] || 3000;
+  , port = process.argv[2] || config.apibunny.port;
 
 //Layout and views
 container.set('views', __dirname + '/views');
@@ -28,8 +30,8 @@ if(process.env.NODE_ENV)
 
 //Keen
 keenio.configure({ client: {
-    projectId: "PROJECT_ID",
-    writeKey: "WRITE_KEY",
+    projectId: config.keen.projectId,
+    writeKey: config.keen.writeKey,
 } });
 
 keenio.on('error', console.warn);
@@ -37,7 +39,7 @@ keenio.on('error', console.warn);
 //Fortune JS resources
 var mazeAPI = fortune({
   db: "./db/maze-data",
-  baseUrl: "http://apibunny.com"
+  baseUrl: config.apibunny.baseUrl
 });
 
 mazeAPI.resource('maze',{

@@ -32,17 +32,12 @@ By default we use `nedb` check the [Fortune.js documentation](http://fortunejs.c
 
 Databases are stored in `/node_modules/data/db/maze-data`
 
-## To change
-To track calls in the API we use [Keen.io](http://keen.io) Analytics API. On top on `fortune.js` you will need to add your Keen.io keys to make it work.
+## Config
+To track calls in the API we use [Keen.io](http://keen.io) Analytics API. In `config.js` you will need to add your Keen.io keys to make it work.
 
-```javascript
-keenio.configure({ client: {
-    projectId: "PROJECT_ID",
-    writeKey: "WRITE_KEY",
-} });
-```
+You will also have to change `privateKey` variable to your own, it's used to generate a hash when users have finished the maze.
 
-You will also have to change `key` variable to your own, it's used to create a hash when users have finished the maze.
+In this config file you can also configure the baseUrl of your API or the port where it will be available.
 
 ## Install
 
