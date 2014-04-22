@@ -4,9 +4,9 @@ APIbunny
 APIbunny was launched on Friday 18th April 2014 to celebrate Easter in a geeky manner.
 Hackers were asked to solve a maze using an Hypermedia API to claim a prize.
 
-Find the whole story here
+Find the whole story on [3scale blog](http://www.3scale.net/2014/04/building-apibunny-using-fortune-js-jsonapi)
 
-Project by [@picsoung](http://github.com/picsoung) from [3scale](http://3scale.net) supported by [APItools](http://apitools.com)
+Project by [@picsoung](http://github.com/picsoung) from [3scale](http://3scale.net) supported by [APItools](http://apitools.com) using [Fortune.js](http://fortunejs.com) and [JSONAPI](http://jsonapi.org) inspired by [Mike Amundsen's](https://twitter.com/mamund) book [RESTful Web APIs](http://www.amazon.com/gp/product/1449358063/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449358063&linkCode=as2&tag=nicolasgcom-20)
 
 ## Live Demo
 http://apibunny.com
@@ -60,4 +60,10 @@ node fortune.js
 ```
 
 ## Clients
-In the community people have built their own client
+In the community people have built their own client, thanks to them for sharing
+
+* [Tiborvass](https://github.com/tiborvass) in Go - [source](https://github.com/tiborvass/apibunny)
+* [Dyokomizo](https://github.com/dyokomizo) in Bash - [source](https://github.com/dyokomizo/apibunny)
+* [Jschmid](https://github.com/jschmid/) in Node - [source](https://github.com/jschmid/APIBunnySolver)
+* [Estoner](https://github.com/estoner) using Ember.js - [source](https://github.com/estoner/apibunny-client)
+* [Mikz](https://gist.github.com/mikz) in Javascript - [source](https://gist.github.com/mikz/a67c266c11ab62d99246)
