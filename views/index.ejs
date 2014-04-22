@@ -1,0 +1,119 @@
+    <style type="text/css">
+      section {
+          
+          text-align:center;
+      }
+      .section-content {
+          clear:both;
+          margin:10px;
+      }
+      pre{
+        text-align: left;
+      }
+
+      main {
+        background-image: url('/img/landscape.svg');
+        background-position: 0px -200px;
+      }
+      .container{
+        background-image: url('/img/easter_bunny.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 0px;
+        background-size: 600px;
+      }
+
+      #home{
+        margin-top: 700px;
+        height:400px;
+      }
+
+      #powered_by{
+        height: 500px;
+      }
+    </style>
+
+<section id="home">
+	<style type="text/css">
+	#rabbit path{
+		stroke:red;
+	}
+	</style>
+	<div>
+		<h1>The API Bunny has hidden Easter Eggs! Start Exploring to find them :)</h1>
+		<h3>“Solve the riddle and prepare for API-ness….” </h3>
+	<div>
+		<br/>
+		<a href="#" class="btn btn-primary btn-lg" id="start" class="next-section">Start looking</a>
+		<script type="text/javascript">
+		$('#start').click(function(e){
+		    e.preventDefault();
+		    var $this = $(this),
+		        $next = $this.parent().next();
+		    $("#quest_start").scrollTo(400, 'linear');
+		});
+		</script>
+		<div>
+			<img src="/img/eggs.svg" />
+		</div>
+</section>
+
+<section id="quest_start">
+	<h2>Hurry before the challenge ends. </h2>
+	<div class="">
+	<pre>
+			<code data-language="generic">
+			&gt; GET /mazes HTTP/1.1
+			&gt; User-Agent: curl/7.24.0
+			&gt; Host: apibunny.com
+			&gt; Accept: */*
+			</code>
+			<code id="first_call"data-language="javascript">
+			{
+			    "mazes": [
+			        {
+			            "id": "<%= maze_id %>",
+			            "name": "<%= maze_name %>",
+			            "links": {
+			                "start": "<%= maze_start %>"
+			            }
+			        }
+			    ],
+			    "links": {
+			        "mazes.start": {
+			            "href": "http://apibunny.com/cells/{mazes.start}",
+			            "type": "cells"
+			        }
+			    }
+			}
+		</code>
+	</pre>
+</section>
+
+<section id ="powered_by">
+<div class="row">
+	<div class="col-md-12">
+		<h1>Powered by</h1>
+		<div class="col-md-6">
+			<a href="http://3scale.net"><img alt="3scale logo" src="/img/3scale_white.svg"/></a>
+		</div>
+		<div class="col-md-6">
+			<a href="http://apitools.com"><img alt="apitools logo" src="/img/apitools.svg" /></a>
+		</div>
+		<div>
+			<img src="/img/eggs.svg" />
+		</div>
+
+		<h2>Using</h2>
+		<div>
+			<a href="http://fortunejs.com">fortune.js</a> and <a href="http://jsonapi.org">jsonapi.org</a> and <a href="http://twitter.com/mamund">Mike Amundsen's</a> Maze concept.
+		</div>
+	</div>
+</div>
+
+</section>
+
+<!-- Code highlight -->  
+<link href="/css/monokai.css" rel="stylesheet" type="text/css">
+<script src="/js/rainbow.min.js"></script>
+<script src="/js/generic.js"></script>
+<script src="/js/javascript.js"></script>

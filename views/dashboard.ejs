@@ -1,0 +1,150 @@
+<style type="text/css">
+.col-md-4{
+	margin-bottom: 20px;
+}
+</style>
+
+<script type="text/javascript">
+    var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+
+    // Configure the Keen object with your Project ID and (optional) access keys.
+    Keen.configure({
+        projectId: "53336f9273f4bb5009000002",
+    readKey:"e86544175f77740099f29a9098544a500aa845b030e6aa8a56c9139e88591be6a80d9aa7dd8b85686bccd731b767ae55402b395c7c6b0438392ec6cd3731eec6cd0c5728bf23059a0b5aaae568c9ac5dd41bd2e4a8e615f01b8581fb67a3dfde1a38a32e4631f7d8669c3e0caaca3199"
+    });
+
+    Keen.onChartsReady(function() {
+	  var metric = new Keen.Metric("abandonCollection", {
+	    analysisType: "count"
+	  });
+	  var myNumber = new Keen.Number(metric, {
+        label: "Total Abandon page views",
+        "number-background-color": "DarkSalmon",
+        "label-background-color": "DarkSalmon",
+        width: "100%",
+      });
+	  
+	  myNumber.draw(document.getElementById("abandonMetric"));
+	});
+
+	Keen.onChartsReady(function() {
+	  var metric = new Keen.Metric("winningCollection", {
+	    analysisType: "count"
+	  });
+	  var myNumber = new Keen.Number(metric, {
+        label: "Number of visit on winning pages",
+        "number-background-color": "MidnightBlue  ",
+        "label-background-color": "MidnightBlue  ",
+        width: "100%",
+      });
+	  
+	  myNumber.draw(document.getElementById("winningMetric"));
+	});
+
+	Keen.onChartsReady(function() {
+	  var metric = new Keen.Metric("indexCollection", {
+	    analysisType: "count"
+	  });
+	  var myNumber = new Keen.Number(metric, {
+        label: "Unique visits on index",
+        "number-background-color": "LightSkyBlue",
+        "label-background-color": "LightSkyBlue",
+        width: "100%",
+      });
+	  myNumber.draw(document.getElementById("indexMetric"));
+	});
+
+	Keen.onChartsReady(function() {
+	  var metric = new Keen.Metric("winningCollection", {
+	    analysisType: "count_unique",
+	    targetProperty: "reaction.username"
+	  });
+	  var myNumber = new Keen.Number(metric, {
+        label: "Unique winners",
+        width: "100%",
+      });
+	  myNumber.draw(document.getElementById("uniqueWinning"));
+	});
+
+	Keen.onChartsReady(function() {
+	  var metric = new Keen.Metric("winningCollection", {
+	    analysisType: "count",
+	    targetProperty: "reaction.username",
+	    groupBy: "reaction.username"
+	  });
+	  var myPieChart = new Keen.PieChart(metric, {
+		    minimumSlicePercentage: 1,
+		    backgroundColor: "transparent",
+		    title: "Traffic to winning page by user",
+		});
+	    myPieChart.draw(document.getElementById("trafficByUsername"));
+	});
+
+	Keen.onChartsReady(function() {
+	  var metric = new Keen.Metric("indexCollection", {
+	    analysisType: "count",
+	    targetProperty: "intention.referer",
+	    groupBy: "intention.referer",
+	    title: "Referrers",
+	  });
+	  var myPieChart = new Keen.PieChart(metric, {
+		    height: 300,
+		    width: 600,
+		    minimumSlicePercentage: 1,
+		    backgroundColor: "transparent",
+		    title: "Referrers to index",
+		});
+	    myPieChart.draw(document.getElementById("referrer"));
+	});
+
+	Keen.onChartsReady(function(){
+
+    //Find the amount of money made from purchases each day for the last 7 days
+    //only count the users that that are over 21 years old.
+    var mySeries = new Keen.Series("indexCollection", {
+        analysisType: "count",
+        timeframe: "today",
+        interval: "minutely"
+    });
+
+    //Draw a line chart in a <div/> with an ID of "purchases"
+    var myLineChart = new Keen.LineChart(mySeries, {
+        height: 500,
+        width: "100%",
+        lineWidth: 2,
+        color: "red",
+        backgroundColor: "transparent",
+        title: "Traffic today per minute",
+        showLegend: false
+    });
+    myLineChart.draw(document.getElementById("trafficToday"));
+});
+</script>
+<div class="row">
+	<h1>APIbunny dashboard</h1>
+	<div class="col-md-4">
+		<div id ="indexMetric"></div>
+	</div>
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-4">
+		<div id ="winningMetric"></div>
+	</div>
+	<div class="col-md-4">
+		<div id ="abandonMetric"></div>
+	</div>
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-4">
+		<div id ="uniqueWinning"></div>
+	</div>
+	<div class="col-md-6">
+		<div id ="trafficByUsername"></div>
+	</div>
+	<div class="col-md-6">
+		<div id ="referrer"></div>
+	</div>
+	<div class="col-md-12">
+		<div id ="trafficToday"></div>
+	</div>
+</div>

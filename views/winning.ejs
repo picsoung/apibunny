@@ -1,0 +1,52 @@
+ <style type="text/css">
+      body {
+        background-image: url('/img/happy_bunny.svg');
+        background-position: 0px -200px;
+        height: 1000px;
+      }
+
+      #winning{
+        position: relative;
+        top: 300px;
+        left: 25%;
+        width: 500px;
+        padding: 10px;
+        background-color: rgba(255,255,255, 0.5);
+        border-radius: 25px;
+        color: black !important;
+        text-align: left;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        color: #325B7F;
+        small {
+          color: #325B7F;
+        }
+      }
+      ul{
+        list-style-type: none;
+      }
+      li{
+        margin-top:10px; 
+      }
+    </style>
+<section id="winning">
+	<div>
+		<h1><%= username %> rocks! I beat the API Bunny Maze! </h1>
+		<ul>
+			<li>
+				<b>1st winner:</b> 1 ticket to the next <a href="http://apistrategyconference.com" target="_blank">API Strategy & Practice Conference</a> in Chicago 24-26 of September 2014.
+			</li>
+			<li>
+				<b>Next 20 finishers:</b> a 30% discount for the conference and a pair of <a href="http://3scale.net">3scale</a> Glasses shipped to you!
+			</li>
+		</ul>
+	<div>
+	<div>
+		<h3>Tweet this page to claim a prize</h3>
+		<div>
+			<a href="https://twitter.com/share" class="twitter-share-button" related="3scale" data-size="large" data-lang="en" data-text="I found the API Bunny's treasure! - Give it a shot at <%= url %> #apibunny @3scale @apitools">Tweet</a>
+			<a href="/" class="btn btn-primary btn-lg" id="start" class="next-section">Start Over</a>
+		</div>
+	</div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</section>

@@ -1,0 +1,30 @@
+{
+  "title" : "Uber Maze",
+  "cells" : {
+      "cell0":{"title":"The Giant Hallway","doors":[1,1,1,0]},
+      "cell1":{"title":"Jammed down the back of the sofa", "doors":[1,1,0,0]},
+      "cell2":{"title":"Tucked behind the bathroom mirror", "doors":[0,1,1,0]},
+      "cell3":{"title":"Inside the giant flowerpot", "doors":[1,1,0,0]},
+      "cell4":{"title":"Next to the fire poker", "doors":[0,1,1,0]},
+      "cell5":{"title":"On top of the loft rafters", "doors":[1,0,1,0]},
+      "cell6":{"title":"Under the children’s bed", "doors":[1,0,1,0]},
+      "cell7":{"title":"Hidden in the mailbox", "doors":[1,0,0,0]},
+      "cell8":{"title":"Under the garden bench", "doors":[0,0,1,1]},
+      "cell9":{"title":"Den of Forks", "doors":[1,0,1,1]},
+      "cell10":{"title":"Swinging from the pull up bar", "doors":[1,0,0,0]},
+      "cell11":{"title":"Squashed between the dresser and the bed", "doors":[0,0,1,0]},
+      "cell12":{"title":"Locked in the iron safe", "doors":[1,0,1,0]},
+      "cell13":{"title":"Nestled between lemons on the table top", "doors":[1,1,0,0]},
+      "cell14":{"title":"Hanging from the artist’s easel ", "doors":[0,1,1,0]},
+      "cell15":{"title":"Tucked in the underwear draw", "doors":[1,0,0,0]},
+      "cell16":{"title":"Sewn into the seat of the armchair", "doors":[0,1,0,0]},
+      "cell17":{"title":"Inside the rock band guitar", "doors":[1,0,0,1]},
+      "cell18":{"title":"Floating in the goldfish bowl", "doors":[0,0,1,0]},
+      "cell19":{"title":"Preserved in the pickle jar", "doors":[1,0,1,0]},
+      "cell20":{"title":"Tied up in the shower curtain", "doors":[1,0,1,1]},
+      "cell21":{"title":"Inside the ballroom chandelier", "doors":[1,0,0,1]},
+      "cell22":{"title":"Next to rover the the family dog", "doors":[0,1,1,1]},
+      "cell23":{"title":"Buried in the prize rose patch", "doors":[1,0,1,1]},
+      "cell24":{"title":"Leaning out of the Bathroom Window", "doors":[1,0,1,1]}    
+    }
+}

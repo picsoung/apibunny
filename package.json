@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "nedb": "~0.9.4",
+    "express": "~3.4.8",
+    "express-partials":"~0.2.0",
+    "sync":"~0.2.2",
+    "express-keenio":"~0.2.7"
+  }
+}
