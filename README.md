@@ -67,3 +67,4 @@ In the community people have built their own client, thanks to them for sharing
 * [Jschmid](https://github.com/jschmid/) in Node - [source](https://github.com/jschmid/APIBunnySolver)
 * [Estoner](https://github.com/estoner) using Ember.js - [source](https://github.com/estoner/apibunny-client)
 * [Mikz](https://gist.github.com/mikz) in Javascript - [source](https://gist.github.com/mikz/a67c266c11ab62d99246)
+* [Lalyos](https://github.com/lalyos) in 140 char Bash [source](https://gist.github.com/lalyos/11314322)
